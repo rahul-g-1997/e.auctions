@@ -1,0 +1,131 @@
+.navbar {
+    background-color: rgb(27, 158, 73);
+    display: flex;
+    margin: 0;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+}
+
+/* for logo  */
+.logodiv {
+    margin-left: 10vw;
+}
+
+.logodiv img {
+    height: 10vh;
+    cursor: pointer;
+}
+
+/* for nav bar */
+.navdiv {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* for upperNav */
+.upperNav {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+ul {
+    list-style-type: none;
+    align-self: flex-end;
+    margin-top: 4px;
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* for lowernav */
+.lowerNav {
+    clip-path: polygon(5vh 0, 100% 0, 100% 100%, 0 100%);
+    background-color: aliceblue;
+    height: 50%;
+    width: 90%;
+    margin-bottom: 0;
+    align-self: flex-end;
+}
+
+.lowerNav li {
+    margin-left: 15px;
+    transition: .5s linear;
+}
+
+.lowerNav a {
+    text-decoration: none;
+    display: block;
+    position: relative;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.lowerNav a:hover {
+    color: rgb(27 158 73);
+}
+
+.lowerNav a:after {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    background: rgb(36 36 36);
+    transition: width .5s linear;
+}
+
+.lowerNav a:hover:after {
+    width: 100%;
+}
+
+/* @media screen and (max-width: 660px) {
+    header {
+        text-align: center;
+    }
+
+    .logo-box {
+        float: none;
+        display: inline-block;
+        margin: 0 0 16px 0;
+    }
+
+    ul {
+        float: none;
+    }
+
+    nav li:first-of-type {
+        margin-left: 0;
+    }
+} */
+
+/* @media screen and (max-width: 550px) {
+    nav {
+        overflow: visible;
+    }
+
+    nav li {
+        display: block;
+        margin: 0;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    nav li:hover {
+        background: rgba(0, 0, 0, .1);
+    }
+
+    nav a:after {
+        content: none;
+    }
+} */
