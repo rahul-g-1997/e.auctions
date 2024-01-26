@@ -1,10 +1,12 @@
 .navbar {
+    position: fixed;
     background-color: rgb(27, 158, 73);
     display: flex;
     margin: 0;
     top: 0;
     width: 100%;
     height: 10vh;
+    margin-bottom: 90vh;
 }
 
 /* for logo  */
@@ -88,44 +90,3 @@ li {
 .lowerNav a:hover:after {
     width: 100%;
 }
-
-/* @media screen and (max-width: 660px) {
-    header {
-        text-align: center;
-    }
-
-    .logo-box {
-        float: none;
-        display: inline-block;
-        margin: 0 0 16px 0;
-    }
-
-    ul {
-        float: none;
-    }
-
-    nav li:first-of-type {
-        margin-left: 0;
-    }
-} */
-
-/* @media screen and (max-width: 550px) {
-    nav {
-        overflow: visible;
-    }
-
-    nav li {
-        display: block;
-        margin: 0;
-        height: 40px;
-        line-height: 40px;
-    }
-
-    nav li:hover {
-        background: rgba(0, 0, 0, .1);
-    }
-
-    nav a:after {
-        content: none;
-    }
-} */

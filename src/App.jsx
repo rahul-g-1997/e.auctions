@@ -1,18 +1,17 @@
 import "./App.css";
 import Footer from "./components/footers/Footer";
 import Navbar from "./components/headers/Navbar";
-import upArrowIcon from "./assets/up-arrow.png"
+import upArrowIcon from "./assets/up-arrow.png";
+import Home from "./pages/home/Home";
 
 function App() {
   return (
     <>
       <Navbar />
-      <h1>hello</h1>
-      <button>hello</button>
+      <Home />
       <Footer />
       {/* 👇️ scroll to top on button click */}
       <div>
-        <div style={{ height: "155rem" }} />
         <img
           src={upArrowIcon}
           alt="Scroll to top"
@@ -21,8 +20,8 @@ function App() {
           }}
           style={{
             position: "fixed",
-            bottom: "40px",
-            right: "40px",
+            bottom: "20px",
+            right: "20px",
             color: "#fff",
             textAlign: "center",
             borderRadius: "50%",
