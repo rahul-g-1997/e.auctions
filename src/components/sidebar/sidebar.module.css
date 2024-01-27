@@ -1,0 +1,13 @@
+.sidebar {
+    display: flex;
+    position: fixed;
+    height: 70%;
+    width: 40px;
+    top: 150px;
+    border-left: 0;
+    border-radius: 0 10px 10px 0;
+    background: #1b9e49;
+    box-shadow: 2px 2px 4px #ffffff,
+        -5px -5px 7px #242424;
+}
+

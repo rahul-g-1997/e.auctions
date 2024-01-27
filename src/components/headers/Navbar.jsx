@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import style from "./navbar.module.css";
 import logo from "../../assets/hfdc-logo.png";
+import Time from "../time/Time";
 
 export default function Navbar() {
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -31,12 +32,19 @@ export default function Navbar() {
     <>
       <div className={style.navbar}>
         <div className={style.logodiv}>
-          <img src={logo} alt="HFDC Logo" />
+          <img className={style.logo} src={logo} alt="HFDC Logo" />
+          <div className={style.name}>
+            <h3>eAuction</h3>
+            <p>
+              हरियाणा वन विकास निगम<br />Haryana Forest Development Corporation
+            </p>
+          </div>
         </div>
 
         <div className={style.navdiv}>
           <div className={style.upperNav}>
             <ul>
+              <li className={style.time}><strong><Time/></strong></li>
               <li>
                 <span className="material-symbols-outlined">support_agent</span>
               </li>
@@ -75,25 +83,22 @@ export default function Navbar() {
             <div>
               <ul>
                 <li>
-                  <a href="">home</a>
+                  <a >home</a>
                 </li>
                 <li>
-                  <a href="">contact</a>
+                  <a >contact</a>
                 </li>
                 <li>
-                  <a href="">downloads</a>
+                  <a >Auction Lots</a>
                 </li>
                 <li>
-                  <a href="">Auction Lots</a>
+                  <a >Auction Results</a>
                 </li>
                 <li>
-                  <a href="">Auction Results</a>
+                  <a >Lot Lists</a>
                 </li>
                 <li>
-                  <a href="">Lot Lists</a>
-                </li>
-                <li>
-                  <a href="">Notices</a>
+                  <a >Notices</a>
                 </li>
               </ul>
             </div>

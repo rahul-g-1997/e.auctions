@@ -1,8 +1,12 @@
 .footer {
+    height: 50px;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(27, 158, 73);
+    box-shadow: 2px 2px 4px #ffffff,
+        -3px -3px 7px #242424;
 }
 
 .footer a {

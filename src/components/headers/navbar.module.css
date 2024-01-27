@@ -1,15 +1,18 @@
 .navbar {
     position: sticky;
-    background-color: rgb(27, 158, 73);
+    background-color: #1b9e49;
     display: flex;
     margin: 0;
     top: 0;
     width: 100%;
     height: 77px;
+    box-shadow: 2px 2px 4px #ffffff,
+        -3px -3px 7px #ffffff;
 }
 
 .logodiv {
-    margin-left: 10vw;
+    margin-left: 3vw;
+    display: flex;
 }
 
 .logodiv img {
@@ -17,20 +20,54 @@
     cursor: pointer;
 }
 
+.name {
+    margin-top: -5px;
+    color: #fff;
+    margin-left: 20px;
+    flex: 1;
+    overflow: hidden;
+}
+
+.name h3,
+.name p {
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 600px) {
+    .logodiv {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .name {
+        margin-top: 10px;
+        overflow: visible;
+    }
+}
+
 /* for nav bar */
 .navdiv {
     display: flex;
     flex-direction: column;
-    margin: 0;
+    margin: 0px;
     padding: 0;
     width: 100%;
 }
 
 /* for upperNav */
 .upperNav {
-    height: 50%;
+    height: 45%;
     display: flex;
     flex-direction: column;
+}
+
+.time {
+    margin-right: 35vw;
+        margin-top: -3px;
 }
 
 .upperNav span {
@@ -42,10 +79,10 @@
     transform: scale(1.4);
 }
 
-ul {
+.upperNav ul {
     list-style-type: none;
     align-self: flex-end;
-    margin-top: 4px;
+    margin-top: -7px;
 }
 
 li {
@@ -60,11 +97,9 @@ li {
     clip-path: polygon(50px 0, 100% 0, 100% 100%, 0 100%);
     background-color: rgb(255, 255, 255);
     display: flex;
-    height: 50%;
-    width: 90%;
+    width: 100%;
     margin-bottom: 0;
     align-self: flex-end;
-    padding-bottom: 10px;
 }
 
 .lowerNav ul {
@@ -106,11 +141,13 @@ li {
 
 .lowerNav .buttondiv {
     margin-left: auto;
-    display: flex;
-    align-items: flex-end;
     padding-right: 10px;
+    margin-top: 14px;
+
 }
 
 .lowerNav button {
     margin-left: 10px;
 }
+
+@media only screen and (max-width: 1300px) {}
