@@ -1,0 +1,20 @@
+.notificationbar {
+    background-color: #ffffff;
+    color: #000000;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.text {
+    animation: roll 30s linear infinite;
+}
+
+@keyframes roll {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}

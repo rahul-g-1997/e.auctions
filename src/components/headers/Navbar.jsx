@@ -72,35 +72,36 @@ export default function Navbar() {
           </div>
 
           <div className={style.lowerNav}>
-            <ul>
-              <li>
-                <a href="">home</a>
-              </li>
-              <li>
-                <a href="">contact</a>
-              </li>
-              <li>
-                <a href="">downloads</a>
-              </li>
-              <li>
-                <a href="">Auction Lots</a>
-              </li>
-              <li>
-                <a href="">Auction Results</a>
-              </li>
-              <li>
-                <a href="">Lot Lists</a>
-              </li>
-              <li>
-                <a href="">Notices</a>
-              </li>
-              <li>
-                <button>Registration</button>
-              </li>
-              <li>
-                <button>Sign In</button>
-              </li>
-            </ul>
+            <div>
+              <ul>
+                <li>
+                  <a href="">home</a>
+                </li>
+                <li>
+                  <a href="">contact</a>
+                </li>
+                <li>
+                  <a href="">downloads</a>
+                </li>
+                <li>
+                  <a href="">Auction Lots</a>
+                </li>
+                <li>
+                  <a href="">Auction Results</a>
+                </li>
+                <li>
+                  <a href="">Lot Lists</a>
+                </li>
+                <li>
+                  <a href="">Notices</a>
+                </li>
+              </ul>
+            </div>
+
+            <div className={style.buttondiv}>
+              <button>Registration</button>
+              <button>Sign In</button>
+            </div>
           </div>
         </div>
       </div>

@@ -1,21 +1,19 @@
 .navbar {
-    position: fixed;
+    position: sticky;
     background-color: rgb(27, 158, 73);
     display: flex;
     margin: 0;
     top: 0;
     width: 100%;
-    height: 10vh;
-    margin-bottom: 90vh;
+    height: 77px;
 }
 
-/* for logo  */
 .logodiv {
     margin-left: 10vw;
 }
 
 .logodiv img {
-    height: 10vh;
+    height: 77px;
     cursor: pointer;
 }
 
@@ -33,7 +31,15 @@
     height: 50%;
     display: flex;
     flex-direction: column;
+}
 
+.upperNav span {
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    transform: scale(1);
+}
+
+.upperNav span:hover {
+    transform: scale(1.4);
 }
 
 ul {
@@ -44,32 +50,39 @@ ul {
 
 li {
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 10px;
     color: #fff;
     cursor: pointer;
 }
 
 /* for lowernav */
 .lowerNav {
-    clip-path: polygon(5vh 0, 100% 0, 100% 100%, 0 100%);
-    background-color: aliceblue;
+    clip-path: polygon(50px 0, 100% 0, 100% 100%, 0 100%);
+    background-color: rgb(255, 255, 255);
+    display: flex;
     height: 50%;
     width: 90%;
     margin-bottom: 0;
     align-self: flex-end;
+    padding-bottom: 10px;
+}
+
+.lowerNav ul {
+    display: flex;
+    justify-content: center;
 }
 
 .lowerNav li {
-    margin-left: 15px;
     transition: .5s linear;
+    margin-left: 10px;
 }
 
 .lowerNav a {
     text-decoration: none;
-    display: block;
     position: relative;
     color: #000000;
     text-transform: uppercase;
+    font-size: 1rem;
 }
 
 .lowerNav a:hover {
@@ -82,11 +95,22 @@ li {
     height: 2px;
     position: absolute;
     left: 0;
-    bottom: 0px;
+    bottom: -3px;
     background: rgb(36 36 36);
     transition: width .5s linear;
 }
 
 .lowerNav a:hover:after {
     width: 100%;
+}
+
+.lowerNav .buttondiv {
+    margin-left: auto;
+    display: flex;
+    align-items: flex-end;
+    padding-right: 10px;
+}
+
+.lowerNav button {
+    margin-left: 10px;
 }

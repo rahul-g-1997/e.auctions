@@ -2,11 +2,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: brown;
+    background-color: rgb(27, 158, 73);
 }
 
 .footer a {
     text-decoration: none;
     color: inherit;
     cursor: pointer;
+}
+
+.footer a:hover {
+    color: black;
 }

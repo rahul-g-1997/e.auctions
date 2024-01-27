@@ -3,10 +3,12 @@ import Footer from "./components/footers/Footer";
 import Navbar from "./components/headers/Navbar";
 import upArrowIcon from "./assets/up-arrow.png";
 import Home from "./pages/home/Home";
+import Notificationbar from "./components/headers/Notificationbar";
 
 function App() {
   return (
     <>
+      <Notificationbar />
       <Navbar />
       <Home />
       <Footer />
@@ -19,6 +21,7 @@ function App() {
             window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
           }}
           style={{
+            backgroundColor: "white",
             position: "fixed",
             bottom: "20px",
             right: "20px",
