@@ -2,17 +2,17 @@ import "./App.css";
 import Footer from "./components/footers/Footer";
 import Navbar from "./components/headers/Navbar";
 import upArrowIcon from "./assets/up-arrow.png";
-import Home from "./pages/home/Home";
 import Notificationbar from "./components/headers/Notificationbar";
 import Sidebar from "./components/sidebar/Sidebar";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <Notificationbar />
       <Navbar />
+      <Notificationbar />
+      <Outlet/>
       <Sidebar />
-      <Home />
       <Footer />
       {/* 👇️ scroll to top on button click */}
       <div>

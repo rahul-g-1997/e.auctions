@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import style from "./navbar.module.css";
 import logo from "../../assets/hfdc-logo.png";
 import Time from "../time/Time";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -34,9 +35,11 @@ export default function Navbar() {
         <div className={style.logodiv}>
           <img className={style.logo} src={logo} alt="HFDC Logo" />
           <div className={style.name}>
-            <h3>eAuction</h3>
+            <h1>eAuction</h1>
             <p>
-              हरियाणा वन विकास निगम<br />Haryana Forest Development Corporation
+              हरियाणा वन विकास निगम
+              <br />
+              Haryana Forest Development Corporation
             </p>
           </div>
         </div>
@@ -44,7 +47,11 @@ export default function Navbar() {
         <div className={style.navdiv}>
           <div className={style.upperNav}>
             <ul>
-              <li className={style.time}><strong><Time/></strong></li>
+              <li className={style.time}>
+                <strong>
+                  <Time />
+                </strong>
+              </li>
               <li>
                 <span className="material-symbols-outlined">support_agent</span>
               </li>
@@ -83,29 +90,28 @@ export default function Navbar() {
             <div>
               <ul>
                 <li>
-                  <a >home</a>
+                  <NavLink to="/">home</NavLink>
                 </li>
                 <li>
-                  <a >contact</a>
+                  <NavLink to="contacts">contacts</NavLink>
                 </li>
                 <li>
-                  <a >Auction Lots</a>
+                  <NavLink to="auction-lots">Auction Lots</NavLink>
                 </li>
                 <li>
-                  <a >Auction Results</a>
+                  <NavLink to="auction-results">Auction Results</NavLink>
                 </li>
                 <li>
-                  <a >Lot Lists</a>
+                  <NavLink to="lotlists">Lot Lists</NavLink>
                 </li>
                 <li>
-                  <a >Notices</a>
+                  <NavLink to="notices">Notices</NavLink>
                 </li>
               </ul>
             </div>
-
             <div className={style.buttondiv}>
-              <button>Registration</button>
-              <button>Sign In</button>
+              <button><NavLink to="registration">Registration</NavLink></button>
+              <button><NavLink to="signin">Sign In</NavLink></button>
             </div>
           </div>
         </div>

@@ -5,18 +5,19 @@
     margin: 0;
     top: 0;
     width: 100%;
-    height: 77px;
+    height: 100px;
     box-shadow: 2px 2px 4px #ffffff,
         -3px -3px 7px #ffffff;
+    z-index: 1000;
 }
 
 .logodiv {
-    margin-left: 3vw;
+    margin-left: 1vw;
     display: flex;
 }
 
 .logodiv img {
-    height: 77px;
+    height: 100px;
     cursor: pointer;
 }
 
@@ -28,7 +29,7 @@
     overflow: hidden;
 }
 
-.name h3,
+.name h1,
 .name p {
     margin: 0;
     padding: 0;
@@ -56,18 +57,19 @@
     margin: 0px;
     padding: 0;
     width: 100%;
+    height: 120px;
 }
 
 /* for upperNav */
 .upperNav {
-    height: 45%;
+    height: 30%;
     display: flex;
     flex-direction: column;
+    padding-top: 3px;
 }
 
 .time {
     margin-right: 30vw;
-        margin-top: -3px;
 }
 
 .upperNav span {
@@ -98,6 +100,7 @@ li {
     background-color: rgb(255, 255, 255);
     display: flex;
     width: 100%;
+    height: 70px;
     margin-bottom: 0;
     align-self: flex-end;
 }
@@ -112,7 +115,7 @@ li {
     margin-left: 10px;
 }
 
-.lowerNav a {
+.lowerNav li a {
     text-decoration: none;
     position: relative;
     color: #000000;
@@ -120,11 +123,11 @@ li {
     font-size: 1rem;
 }
 
-.lowerNav a:hover {
+.lowerNav li a:hover {
     color: rgb(27 158 73);
 }
 
-.lowerNav a:after {
+.lowerNav li a:after {
     content: "";
     width: 0;
     height: 2px;
@@ -135,7 +138,7 @@ li {
     transition: width .5s linear;
 }
 
-.lowerNav a:hover:after {
+.lowerNav li a:hover:after {
     width: 100%;
 }
 
