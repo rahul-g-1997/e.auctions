@@ -1,0 +1,39 @@
+.clock {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notifications,
+.dates {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.notifications {
+    background-color: #3498db;
+    /* Notification circle color */
+}
+
+.dates {
+    background-color: #e74c3c;
+    /* Dates circle color */
+}
+
+/* You can add styles for the content inside the circles */
+.notifications p,
+.dates p {
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    /* Add more styles as needed */
+}

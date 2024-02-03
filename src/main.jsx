@@ -20,8 +20,8 @@ import {
 
 const route = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<App />} errorElement={<Error />}>
-      <Route path="" element={<Home />} />
+    <Route path="" element={<App />} errorElement={<Error />}>
+      <Route path="/" element={<Home />} />
       <Route path="/contacts" element={<Contacts />} />
       <Route path="/auction-lots" element={<AuctionLots />} />
       <Route path="/auction-results" element={<AuctionResults />} />

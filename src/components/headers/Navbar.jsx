@@ -90,28 +90,62 @@ export default function Navbar() {
             <div>
               <ul>
                 <li>
-                  <NavLink to="/">home</NavLink>
+                  <NavLink
+                    to="/"
+                    className={({ isActive }) => (isActive ? style.active : "")}
+                  >
+                    home
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="contacts">contacts</NavLink>
+                  <NavLink
+                    to="contacts"
+                    className={({ isActive }) => (isActive ? style.active : "")}
+                  >
+                    contacts
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="auction-lots">Auction Lots</NavLink>
+                  <NavLink
+                    to="auction-lots"
+                    className={({ isActive }) => (isActive ? style.active : "")}
+                  >
+                    Auction Lots
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="auction-results">Auction Results</NavLink>
+                  <NavLink
+                    to="auction-results"
+                    className={({ isActive }) => (isActive ? style.active : "")}
+                  >
+                    Auction Results
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="lotlists">Lot Lists</NavLink>
+                  <NavLink
+                    to="lotlists"
+                    className={({ isActive }) => (isActive ? style.active : "")}
+                  >
+                    Lot Lists
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="notices">Notices</NavLink>
+                  <NavLink
+                    to="notices"
+                    className={({ isActive }) => (isActive ? style.active : "")}
+                  >
+                    Notices
+                  </NavLink>
                 </li>
               </ul>
             </div>
             <div className={style.buttondiv}>
-              <button><NavLink to="registration">Registration</NavLink></button>
-              <button><NavLink to="signin">Sign In</NavLink></button>
+              <NavLink to="registration">
+                <button>Registration</button>
+              </NavLink>
+              <NavLink to="signin">
+                <button>Sign In</button>
+              </NavLink>
             </div>
           </div>
         </div>

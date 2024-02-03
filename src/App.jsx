@@ -2,7 +2,7 @@ import "./App.css";
 import Footer from "./components/footers/Footer";
 import Navbar from "./components/headers/Navbar";
 import upArrowIcon from "./assets/up-arrow.png";
-import Notificationbar from "./components/headers/Notificationbar";
+// import Notificationbar from "./components/headers/Notificationbar";
 import Sidebar from "./components/sidebar/Sidebar";
 import { Outlet } from "react-router-dom";
 
@@ -10,8 +10,10 @@ function App() {
   return (
     <>
       <Navbar />
-      <Notificationbar />
-      <Outlet/>
+      {/* <Notificationbar /> */}
+      <div className="container">
+        <Outlet />
+      </div>
       <Sidebar />
       <Footer />
       {/* 👇️ scroll to top on button click */}
