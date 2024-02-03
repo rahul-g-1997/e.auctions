@@ -7,7 +7,6 @@ import img4 from "../../assets/slider4.jpg";
 import Counter from "../../components/counter/Counter";
 import Notificationbar from "../../components/headers/Notificationbar";
 import { AuctionRoadmap } from "../../components/auctionRoadmap/AuctionRoadmap";
-
 export default function Home() {
   const images = [{ url: img1 }, { url: img2 }, { url: img3 }, { url: img4 }];
   const cards = [
