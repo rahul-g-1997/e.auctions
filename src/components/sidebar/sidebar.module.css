@@ -1,10 +1,12 @@
 aside {
     position: fixed;
-    top: 30%;
+    top: 40%;
     left: 0;
     z-index: 2;
     overflow-x: hidden;
 }
+
+
 
 aside .link {
     height: 40px;
@@ -12,7 +14,7 @@ aside .link {
     background-color: #1b9e49;
     position: relative;
     margin-bottom: 1px;
-    cursor: pointer ;
+    cursor: pointer;
     transition: linear 0.3s;
     border-radius: 0 7px 7px 0;
     border: solid 2px white;
@@ -24,7 +26,7 @@ aside .link .text {
     font-size: 17px;
     color: white;
     margin-left: 4px;
-    cursor: pointer ;
+    cursor: pointer;
 }
 
 aside .icon {
@@ -33,7 +35,7 @@ aside .icon {
     align-items: center;
     width: 40px;
     height: 40px;
-    cursor: pointer ;
+    cursor: pointer;
     position: absolute;
     top: 0;
     left: 82.5%;
@@ -41,7 +43,7 @@ aside .icon {
 
 .aside1 .link:hover {
     margin-left: 0;
-    cursor: pointer ;
+    cursor: pointer;
 }
 
 .aside1 .link {

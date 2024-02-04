@@ -62,6 +62,26 @@ export default function Home() {
           autoPlay={true}
         />
       </div>
+      <section className="experience">
+        <h1 className="section-heading mb75px">
+          <span>
+            <i className="fas fa-briefcase"></i>
+          </span>
+          <span> Work Experience </span>
+        </h1>
+
+        <div className={style.timeline}>
+          <div className={style.timelinebox}></div>
+          <div className={style.timelinebox}></div>
+          <div className={style.timelinebox}></div>
+          <div className={style.timelinebox}></div>
+          <div className={style.timelinedivider}>
+            <div className={style.timelinetraveller}>
+              <i className="fas fa-plane"></i>
+            </div>
+          </div>
+        </div>
+      </section>
       <AuctionRoadmap />
       <div className={style.container}>
         {cards.map((card, i) => (

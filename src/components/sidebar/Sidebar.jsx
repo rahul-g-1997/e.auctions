@@ -4,9 +4,7 @@ import Speech from "../../components/speechSynthesis/Speech";
 const Sidebar = () => {
   return (
     <div>
-      <div>
-        <Speech />
-      </div>
+      <Speech />
       <aside className={style.aside1}>
         <div className={style.link} data-link="dashboard">
           <div className={style.icon}>
