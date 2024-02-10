@@ -1,5 +1,7 @@
 .sli {
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .container {
@@ -26,7 +28,7 @@
 
 .timeline {
     position: relative;
-    width: 75%;
+    width: 100%;
     border: 2px solid black;
 
 }
@@ -79,7 +81,7 @@
     left: 50%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1190px) {
     .timelinedivider {
         Left: 5%;
     }
@@ -105,3 +107,4 @@ html {
     transform: rotate(90deg);
     z-index: 2;
 }
+

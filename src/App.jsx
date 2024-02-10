@@ -2,7 +2,6 @@ import "./App.css";
 import Footer from "./components/footers/Footer";
 import Navbar from "./components/headers/Navbar";
 import upArrowIcon from "./assets/up-arrow.png";
-// import Notificationbar from "./components/headers/Notificationbar";
 import Sidebar from "./components/sidebar/Sidebar";
 import { Outlet } from "react-router-dom";
 
@@ -10,7 +9,6 @@ function App() {
   return (
     <>
       <Navbar />
-      {/* <Notificationbar /> */}
       <div className="container">
         <Outlet />
       </div>
@@ -28,11 +26,11 @@ function App() {
             backgroundColor: "white",
             position: "fixed",
             bottom: "20px",
-            right: "20px",
+            right: "7px",
             color: "#fff",
             textAlign: "center",
             borderRadius: "50%",
-            boxShadow: "0px 2px 4px rgba(0, 0, 0, 1)",
+            boxShadow: "4px 4px 4px rgba(0, 0, 0, 1)",
             transition: "transform 0.2s ease",
           }}
           className="hover-scale"

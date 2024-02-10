@@ -2,27 +2,24 @@
     position: sticky;
     background-color: #1b9e49;
     display: flex;
-    margin: 0;
     top: 0;
-    width: 100%;
-    height: 100px;
-    box-shadow: 5px 5px 10px #000000,
-        -5px -5px 10px #bebebe;
+    align-items: center;
+    box-shadow: 1px 1px 5px #000000;
     z-index: 1000;
 }
 
 .logodiv {
-    margin-left: 1vw;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logodiv img {
-    height: 100px;
+    height: 100%;
     cursor: pointer;
 }
 
 .name {
-    margin-top: -5px;
     color: #fff;
     margin-left: 20px;
     flex: 1;
@@ -32,22 +29,9 @@
 .name h1,
 .name p {
     margin: 0;
-    padding: 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-@media screen and (max-width: 600px) {
-    .logodiv {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .name {
-        margin-top: 10px;
-        overflow: visible;
-    }
 }
 
 /* for nav bar */
@@ -64,12 +48,16 @@
 .upperNav {
     height: 40%;
     display: flex;
-    flex-direction: column;
-    padding-top: 3px;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-.time {
-    margin-right: 30vw;
+.upperNav ul {
+    list-style-type: none;
+}
+
+.upperNav .time {
+    margin: 0 auto;
 }
 
 .upperNav span {
@@ -81,16 +69,11 @@
     transform: scale(1.4);
 }
 
-.upperNav ul {
-    list-style-type: none;
-    align-self: flex-end;
-    margin-top: -7px;
-}
-
 li {
     display: inline-block;
     margin-right: 10px;
     color: #fff;
+    position: relative;
     cursor: pointer;
 }
 
@@ -99,17 +82,19 @@ li {
     clip-path: polygon(60px 0, 100% 0, 100% 100%, 0 100%);
     background-color: rgb(255, 255, 255);
     display: flex;
-    width: 100%;
-    height: 60px;
-    margin-bottom: 0;
-    align-self: flex-end;
+    height: 60%;
+    align-items: center;
     box-shadow: 5px 5px 10px #000000,
-            -5px -5px 10px #bebebe;
+        -5px -5px 10px #bebebe;
 }
 
+.lowerNav .name {
+    display: none;
+}
+
+
+
 .lowerNav ul {
-    display: flex;
-    justify-content: center;
     margin-left: 30px;
 }
 
@@ -119,7 +104,6 @@ li {
 }
 
 .lowerNav li a {
-    text-decoration: none;
     position: relative;
     color: #000000;
     text-transform: uppercase;
@@ -133,7 +117,7 @@ li {
 .lowerNav li a:after {
     content: "";
     width: 0;
-    height: 2px;
+    height: 2.5px;
     position: absolute;
     left: 0;
     bottom: -2px;
@@ -148,28 +132,97 @@ li {
 .lowerNav .buttondiv {
     margin-left: auto;
     padding-right: 10px;
-    margin-top: 14px;
-
 }
 
 .lowerNav button {
     margin-left: 10px;
 }
 
-.buttondiv a {
-    color: #000;
-    text-decoration: none;
-}
-
-.buttondiv a:hover {
-    color: #ffffff;
-    text-decoration: none;
-}
-
 .active {
-    bottom: 3px;
     border-bottom: rgb(36 36 36) solid;
     color: rgb(27 158 73) !important;
 }
 
-@media only screen and (max-width: 1300px) {}
+
+/* Tablet (landscape) */
+@media only screen and (min-width: 768px) and (max-width: 1043px) {
+
+    .name,
+    .lowerNav ul {
+        display: none;
+    }
+
+    .lowerNav .name {
+        display: flex;
+        justify-content: center;
+        margin-left: 60px;
+        color: #1b9e49;
+    }
+
+    .navdiv,
+    .logodiv img {
+        height: 70px;
+    }
+
+    .name h1,
+    .name p {
+
+        font-size: 1rem;
+    }
+
+    .lowerNav .name p {
+        font-size: 1.3rem;
+        font-weight: bolder;
+    }
+}
+
+/* Tablet (portrait) */
+@media only screen and (max-width: 768px) {
+
+    .name,
+    .lowerNav ul {
+        display: none;
+    }
+
+    .navdiv,
+    .logodiv img {
+        height: 70px;
+    }
+
+    .lowerNav .name {
+        display: flex;
+        justify-content: center;
+        margin-left: 60px;
+        color: #1b9e49;
+    }
+
+    .lowerNav .name p {
+        font-size: 1.3rem;
+        font-weight: bolder;
+    }
+}
+
+
+
+/* Mobile */
+@media only screen and (max-width: 480px) {
+    .lowerNav {
+        display: block;
+        margin-left: 10px;
+        color: #1b9e49;
+    }
+
+    .upperNav .time {
+        font-size: 0.5rem;
+    }
+
+    .lowerNav .name {
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+
+    .navdiv,
+    .logodiv img {
+        height: 70px;
+    }
+}

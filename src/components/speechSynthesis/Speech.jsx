@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useSpeechSynthesis } from "react-speech-kit";
 import {
   RecordVoiceOverOutlined,
@@ -21,22 +21,10 @@ export default function Speech() {
 
   const voice = voices[voiceIndex] || null;
 
-  const handleTextSet = () => {
-    const text = window.getSelection().toString();
-    if (text !== "") setHighlightedText(text);
+  const handleMouseOver = (event) => {
+    const hoveredText = event.target.textContent.trim();
+    speak({ text: hoveredText });
   };
-
-  useEffect(() => {
-    const handleMouseUp = () => {
-      handleTextSet();
-    };
-
-    document.addEventListener("mouseup", handleMouseUp);
-
-    return () => {
-      document.removeEventListener("mouseup", handleMouseUp);
-    };
-  }, []);
 
   const handleVoiceChange = (e) => {
     setVoiceIndex(e.target.value);
@@ -93,7 +81,7 @@ export default function Speech() {
             </select>
             <div className={Style.rangeContainer}>
               <div>
-                <label htmlFor="rate">Speeking speed : </label>
+                <label htmlFor="rate">Speaking speed : </label>
                 <span>{rate}</span>&nbsp;&nbsp;
                 <input
                   type="range"
@@ -122,6 +110,11 @@ export default function Speech() {
             </div>
           </div>
         )}
+      </div>
+      {/* Added onMouseOver event handler to trigger speech */}
+      <div className={Style.content} onMouseOver={handleMouseOver}>
+        {/* Your content here */}
+        Testing
       </div>
     </div>
   );

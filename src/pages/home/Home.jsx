@@ -7,6 +7,7 @@ import img4 from "../../assets/slider4.jpg";
 import Counter from "../../components/counter/Counter";
 import Notificationbar from "../../components/headers/Notificationbar";
 import { AuctionRoadmap } from "../../components/auctionRoadmap/AuctionRoadmap";
+import useResizeObserver from "use-resize-observer";
 export default function Home() {
   const images = [{ url: img1 }, { url: img2 }, { url: img3 }, { url: img4 }];
   const cards = [
@@ -45,29 +46,37 @@ export default function Home() {
       count: 1347,
       logo: "http://",
     },
-    
   ];
+  const { ref, width = 1, height = 1 } = useResizeObserver();
+
   return (
     <div className={style.home}>
       <div className={style.sli}>
-        <Notificationbar />
-        <SimpleImageSlider
-          width={1416}
-          height={400}
-          images={images}
-          showBullets={true}
-          showNavs={true}
-          loop={true}
-          slideDuration={0.7}
-          autoPlay={true}
-        />
+        {/* <Notificationbar /> */}
+        {/* <div
+          ref={ref}
+          className="card_imgBox"
+          style={{ width: "100%", height: "400px" }}
+        >
+          <SimpleImageSlider
+            className="card_img"
+            width={width}
+            height={height}
+            images={images}
+            showBullets={true}
+            showNavs={true}
+            loop={true}
+            slideDuration={0.7}
+            autoPlay={true}
+          />
+        </div> */}
       </div>
       <section className="experience">
         <h1 className="section-heading mb75px">
           <span>
             <i className="fas fa-briefcase"></i>
           </span>
-          <span> Work Experience </span>
+          <span> Road Map </span>
         </h1>
 
         <div className={style.timeline}>

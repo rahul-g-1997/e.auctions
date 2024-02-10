@@ -3,8 +3,10 @@ import style from "./navbar.module.css";
 import logo from "../../assets/hfdc-logo.png";
 import Time from "../time/Time";
 import { NavLink } from "react-router-dom";
+import  useHoverSpeech  from "../speechSynthesis/useHoverSpeech";
 
 export default function Navbar() {
+  const { handleMouseOver } = useHoverSpeech();
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   const handleFullscreen = () => {
@@ -29,12 +31,15 @@ export default function Navbar() {
     };
   }, []);
 
+  
+
   return (
     <>
       <div className={style.navbar}>
+        {/* logo and name  */}
         <div className={style.logodiv}>
           <img className={style.logo} src={logo} alt="HFDC Logo" />
-          <div className={style.name}>
+          <div className={style.name} onMouseOver={handleMouseOver}>
             <h1>eAuction</h1>
             <p>
               हरियाणा वन विकास निगम
@@ -44,32 +49,37 @@ export default function Navbar() {
           </div>
         </div>
 
+        {/* nav bar */}
         <div className={style.navdiv}>
+          {/* upper nav */}
           <div className={style.upperNav}>
+            <div className={style.time}>
+              <strong onMouseOver={handleMouseOver}>
+                <Time />
+              </strong>
+            </div>
             <ul>
-              <li className={style.time}>
-                <strong>
-                  <Time />
-                </strong>
+              <li>
+                <span>English</span>
               </li>
               <li>
                 <span className="material-symbols-outlined">support_agent</span>
               </li>
-              <li>
+              {/* <li>
                 <span className="material-symbols-outlined">text_increase</span>
-              </li>
+              </li> */}
               <li>
                 <span className="material-symbols-outlined">match_case</span>
               </li>
-              <li>
+              {/* <li>
                 <span className="material-symbols-outlined">text_decrease</span>
-              </li>
+              </li> */}
               <li>
                 <span className="material-symbols-outlined">dark_mode</span>
               </li>
-              <li>
+              {/* <li>
                 <span className="material-symbols-outlined">light_mode</span>
-              </li>
+              </li> */}
               <li>
                 <i className={style.screenbtn} onClick={handleFullscreen}>
                   {isFullscreen ? (
@@ -86,13 +96,21 @@ export default function Navbar() {
             </ul>
           </div>
 
+          {/* lower nav */}
           <div className={style.lowerNav}>
-            <div>
+            {/* lower nav list */}
+            <div id={style.Navbar}>
+              <div className={style.name} onMouseOver={handleMouseOver}>
+                <p>
+                  हरियाणा वन विकास निगम
+                </p>
+              </div>
               <ul>
                 <li>
                   <NavLink
                     to="/"
                     className={({ isActive }) => (isActive ? style.active : "")}
+                    onMouseOver={handleMouseOver}
                   >
                     home
                   </NavLink>
@@ -101,6 +119,7 @@ export default function Navbar() {
                   <NavLink
                     to="contacts"
                     className={({ isActive }) => (isActive ? style.active : "")}
+                    onMouseOver={handleMouseOver}
                   >
                     contacts
                   </NavLink>
@@ -109,6 +128,7 @@ export default function Navbar() {
                   <NavLink
                     to="auction-lots"
                     className={({ isActive }) => (isActive ? style.active : "")}
+                    onMouseOver={handleMouseOver}
                   >
                     Auction Lots
                   </NavLink>
@@ -117,6 +137,7 @@ export default function Navbar() {
                   <NavLink
                     to="auction-results"
                     className={({ isActive }) => (isActive ? style.active : "")}
+                    onMouseOver={handleMouseOver}
                   >
                     Auction Results
                   </NavLink>
@@ -125,6 +146,7 @@ export default function Navbar() {
                   <NavLink
                     to="lotlists"
                     className={({ isActive }) => (isActive ? style.active : "")}
+                    onMouseOver={handleMouseOver}
                   >
                     Lot Lists
                   </NavLink>
@@ -133,20 +155,23 @@ export default function Navbar() {
                   <NavLink
                     to="notices"
                     className={({ isActive }) => (isActive ? style.active : "")}
+                    onMouseOver={handleMouseOver}
                   >
                     Notices
                   </NavLink>
                 </li>
               </ul>
             </div>
-            <div className={style.buttondiv}>
+
+            {/* registration and sign in  */}
+            {/* <div className={style.buttondiv}>
               <NavLink to="registration">
-                <button>Registration</button>
+                <button onMouseOver={handleMouseOver}>Registration</button>
               </NavLink>
               <NavLink to="signin">
-                <button>Sign In</button>
+                <button onMouseOver={handleMouseOver}>Sign In</button>
               </NavLink>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
