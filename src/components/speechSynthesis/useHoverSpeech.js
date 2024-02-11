@@ -1,15 +1,18 @@
-// useHoverSpeech.js
 import { useSpeechSynthesis } from "react-speech-kit";
 
 const useHoverSpeech = () => {
-  const { speak } = useSpeechSynthesis();
+  const { speak, cancel } = useSpeechSynthesis();
 
   const handleMouseOver = (event) => {
     const hoveredText = event.target.textContent.trim();
     speak({ text: hoveredText });
   };
 
-  return { handleMouseOver };
+  const handleMouseOut = () => {
+    cancel(); // Stop speech synthesis when mouse leaves
+  };
+
+  return { handleMouseOver, handleMouseOut };
 };
 
 export default useHoverSpeech;

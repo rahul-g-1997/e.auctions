@@ -3,10 +3,10 @@ import style from "./navbar.module.css";
 import logo from "../../assets/hfdc-logo.png";
 import Time from "../time/Time";
 import { NavLink } from "react-router-dom";
-import  useHoverSpeech  from "../speechSynthesis/useHoverSpeech";
+import useHoverSpeech from "../speechSynthesis/useHoverSpeech";
 
 export default function Navbar() {
-  const { handleMouseOver } = useHoverSpeech();
+  const { handleMouseOver, handleMouseOut } = useHoverSpeech();
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   const handleFullscreen = () => {
@@ -31,15 +31,17 @@ export default function Navbar() {
     };
   }, []);
 
-  
-
   return (
     <>
       <div className={style.navbar}>
         {/* logo and name  */}
         <div className={style.logodiv}>
           <img className={style.logo} src={logo} alt="HFDC Logo" />
-          <div className={style.name} onMouseOver={handleMouseOver}>
+          <div
+            className={style.name}
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}
+          >
             <h1>eAuction</h1>
             <p>
               हरियाणा वन विकास निगम
@@ -54,7 +56,7 @@ export default function Navbar() {
           {/* upper nav */}
           <div className={style.upperNav}>
             <div className={style.time}>
-              <strong onMouseOver={handleMouseOver}>
+              <strong onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
                 <Time />
               </strong>
             </div>
@@ -100,10 +102,12 @@ export default function Navbar() {
           <div className={style.lowerNav}>
             {/* lower nav list */}
             <div id={style.Navbar}>
-              <div className={style.name} onMouseOver={handleMouseOver}>
-                <p>
-                  हरियाणा वन विकास निगम
-                </p>
+              <div
+                className={style.name}
+                onMouseOver={handleMouseOver}
+                onMouseOut={handleMouseOut}
+              >
+                <p>हरियाणा वन विकास निगम</p>
               </div>
               <ul>
                 <li>
@@ -111,6 +115,7 @@ export default function Navbar() {
                     to="/"
                     className={({ isActive }) => (isActive ? style.active : "")}
                     onMouseOver={handleMouseOver}
+                    onMouseOut={handleMouseOut}
                   >
                     home
                   </NavLink>
@@ -120,6 +125,7 @@ export default function Navbar() {
                     to="contacts"
                     className={({ isActive }) => (isActive ? style.active : "")}
                     onMouseOver={handleMouseOver}
+                    onMouseOut={handleMouseOut}
                   >
                     contacts
                   </NavLink>
@@ -129,6 +135,7 @@ export default function Navbar() {
                     to="auction-lots"
                     className={({ isActive }) => (isActive ? style.active : "")}
                     onMouseOver={handleMouseOver}
+                    onMouseOut={handleMouseOut}
                   >
                     Auction Lots
                   </NavLink>
@@ -138,6 +145,7 @@ export default function Navbar() {
                     to="auction-results"
                     className={({ isActive }) => (isActive ? style.active : "")}
                     onMouseOver={handleMouseOver}
+                    onMouseOut={handleMouseOut}
                   >
                     Auction Results
                   </NavLink>
@@ -147,6 +155,7 @@ export default function Navbar() {
                     to="lotlists"
                     className={({ isActive }) => (isActive ? style.active : "")}
                     onMouseOver={handleMouseOver}
+                    onMouseOut={handleMouseOut}
                   >
                     Lot Lists
                   </NavLink>
@@ -156,6 +165,7 @@ export default function Navbar() {
                     to="notices"
                     className={({ isActive }) => (isActive ? style.active : "")}
                     onMouseOver={handleMouseOver}
+                    onMouseOut={handleMouseOut}
                   >
                     Notices
                   </NavLink>
